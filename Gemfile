@@ -4,6 +4,8 @@ ruby '2.2.0'
 
 gem 'rails', '4.2.5.2'
 gem 'rails-api'
+gem 'devise'
+gem 'rails_admin'
 gem 'active_model_serializers'
 gem 'pg'
 gem 'api-versions', '~> 1.0'
@@ -19,12 +21,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'redis-rails'
 gem 'mock_redis'
 gem 'redis-namespace'
-gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'rails_12factor'
+gem 'figaro'
+gem 'faker'
 
 group :development do
   gem 'web-console', '~> 2.0'
@@ -41,5 +44,4 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
-  gem 'faker'
 end

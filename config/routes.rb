@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   api vendor_string: 'magmaconf', default_version: 1, path: 'v1', defaults: { format: :json } do
     version 1 do

@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '2a317806f9c451044fe4013017bcb946c98f1f764d05432ffbe1ad1bb22688d115937f7ed250e8e7533e514c13d32649ca75da7d0fb48bd8b3be9adcb7cfddaf'
+  config.secret_key = '2a317806f9c451044fe4013017bcb946c98f1f764d05432ffbe1ad1bb22688d115937f7ed250e8e7533e514c13d32649ca75da7d0fb48bd8b3be9adcb7cfddaf'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -14,16 +14,16 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'magmaconf@example.com'
 
-  # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
-
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
+  require 'omniauth-facebook'
 
-  # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
+  # Configure for facebook working with Devise
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], provider_ignores_state: true
+
   # config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
   # config.omniauth :github, ENV['GITHUB_APP_ID'], ENV['GITHUB_APP_SECRET']
 
