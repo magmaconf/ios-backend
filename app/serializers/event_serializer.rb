@@ -1,4 +1,4 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :name, :date
+  attributes :id, :name, :date, :updated_at
   has_many :talks
 end
