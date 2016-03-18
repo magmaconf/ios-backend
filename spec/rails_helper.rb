@@ -15,6 +15,11 @@ if ENV['RAILS_ENV'] == 'test'
 end
 
 require File.expand_path('../../config/environment', __FILE__)
+
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
@@ -82,4 +87,12 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryGirl::Syntax::Methods
   config.include ActiveSupport::Testing::TimeHelpers
+
+  #Including to test requests
+  config.include Request::JsonHelpers, type: :controller
+  config.include Request::HeadersHelpers, type: :controller
+
+  config.before(:each, type: :controller) do
+    include_default_accept_headers
+  end
 end
