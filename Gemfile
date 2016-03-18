@@ -40,6 +40,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'simplecov', require: false
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development, :test do
