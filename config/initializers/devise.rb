@@ -19,11 +19,8 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-  require 'omniauth-facebook'
 
   # Configure for facebook working with Devise
-  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], provider_ignores_state: true
-
   # config.omniauth :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
   # config.omniauth :github, ENV['GITHUB_APP_ID'], ENV['GITHUB_APP_SECRET']
 
