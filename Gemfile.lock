@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/8geonirt/rails_admin_theme.git
+  revision: 9f3c7e1c350f59a984d2ad4423e80ba28c967d8d
+  branch: feature/mgm-theme
+  specs:
+    rails_admin_rollincode (1.1)
+      rails (>= 4.0, < 6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -294,6 +302,7 @@ DEPENDENCIES
   rails-api
   rails_12factor
   rails_admin
+  rails_admin_rollincode!
   redis-namespace
   redis-rails
   rspec-rails (~> 3.0)
