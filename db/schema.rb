@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307063308) do
+ActiveRecord::Schema.define(version: 20161011164009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,12 +23,29 @@ ActiveRecord::Schema.define(version: 20160307063308) do
     t.datetime "updated_at"
   end
 
+  create_table "mascots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.integer  "votes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.time     "hour"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
   create_table "speakers", force: :cascade do |t|
     t.string   "name"
     t.string   "twitter_account"
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nickname"
+    t.text     "bio"
   end
 
   create_table "talks", force: :cascade do |t|
@@ -47,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160307063308) do
     t.boolean  "has_feedback", default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "schedule_id"
   end
 
   create_table "users", force: :cascade do |t|
