@@ -49,8 +49,8 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 .links {
   ul li {
     a {
-      color: white;
       background: $primary;
+      color: white;
     }
     &:nth-child(1) {
       a {
@@ -159,11 +159,11 @@ body.rails_admin .sidebar-nav > .nav-stacked > li > a {
 
 .dropdown-header.open {
   &::after {
+    color: white;
     content: "\f13a" !important;
+    font-family: 'FontAwesome', sans-serif;
     position: absolute;
     right: 15px;
-    color: white;
-    font-family: 'FontAwesome', sans-serif;
   }
 }
 
@@ -188,12 +188,12 @@ a,
 }
 
 a.navbar-brand {
+  background: $secondary !important;
+  color: white !important;
+  cursor: pointer !important;
   line-height: 25px;
   padding-top: 12px;
   white-space: nowrap;
-  color: white !important;
-  cursor: pointer !important;
-  background: $secondary !important;
   &:hover {
     background: darken($secondary, 10%) !important;
     color: white !important;
@@ -204,17 +204,17 @@ a.navbar-brand {
   margin-top: 0;
   h1 {
     background: $h1-color;
-    padding: 10px 15px;
-    color: white;
     border-radius: 2px;
-    text-transform: uppercase;
+    color: white;
     margin-top: 0;
+    padding: 10px 15px;
+    text-transform: uppercase;
   }
 }
 
 .content {
-  margin: 19px 0 15px 0;
   background: white;
+  margin: 19px 0 15px 0;
   padding: 20px;
   a {
     color: $secondary;
@@ -249,14 +249,14 @@ a.navbar-brand {
 
 .sub-menu a {
   color: white;
-  padding: 10px 15px 10px 30px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  font-weight: normal;
-  text-transform: inherit;
   cursor: pointer;
   display: block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  padding: 10px 15px 10px 30px;
   text-decoration: none;
+  text-transform: inherit;
 }
 
 .sub-menu-container {
@@ -311,19 +311,19 @@ h1,
 }
 
 #fields_to_export .control-label {
-  text-align: left;
   margin-bottom: 0;
-  padding-top: 8px;
   padding-bottom: 8px;
+  padding-top: 8px;
+  text-align: left;
 }
 
 .table-striped th,
 .table-striped td,
 body.rails_admin .table td {
-  vertical-align: middle;
-  line-height: 40px;
   border-right: 1px solid #ddd;
+  line-height: 40px;
   padding: 6px 11px;
+  vertical-align: middle;
 }
 
 .row-highlight td {
@@ -349,8 +349,8 @@ td.carrierwave_type .img-thumbnail {
 }
 
 .img-thumbnail {
-  max-width: 125px;
   background: #EEE;
+  max-width: 125px;
 }
 
 .breadcrumb .false a {
@@ -405,9 +405,9 @@ td.carrierwave_type .img-thumbnail {
 }
 
 .sortable-container {
-  width: 100%;
   background: lighten($secondary, 5%);
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .ref_number, .li_sortable_label {
@@ -422,17 +422,17 @@ td.carrierwave_type .img-thumbnail {
 }
 
 .ref_number {
-  color: $secondary;
   background: $primary;
-  padding: 10px 15px;
   border-left: 2px solid darken($secondary, 20%);
+  color: $secondary;
+  padding: 10px 15px;
 }
 
 .ui-state-highlight {
-  padding: 10px 15px;
   margin: 0 15px 15px 15px;
-  width: 100%;
   min-height: 40px;
+  padding: 10px 15px;
+  width: 100%;
 }
 
 .well {
@@ -442,35 +442,35 @@ td.carrierwave_type .img-thumbnail {
 .fieldset {
   dl {
     dt span.label-info {
-      text-align: left;
-      display: block;
-      padding: 10px;
-      font-size: 13px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      display: block;
+      font-size: 13px;
+      padding: 10px;
+      text-align: left;
     }
     dd.well {
-      padding: 10px;
-      border-top: 0;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border-top: 0;
+      padding: 10px;
     }
   }
 }
 
 .bootstrap-datetimepicker-widget table td.day {
   color: #333;
-  width: 10px;
   height: 10px;
   line-height: 10px;
   padding: 10px 0;
+  width: 10px;
 }
 
 .bootstrap-datetimepicker-widget table td span {
-  width: 25px;
+  color: #333;
   height: 25px;
   line-height: 25px;
-  color: #333;
+  width: 25px;
 }
 
 #edit_page {
