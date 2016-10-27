@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       cache as: 'v1' do
         resources :speakers, only: :index
         resources :events, only: :index
+        resources :schedules, only: :index
       end
     end
   end

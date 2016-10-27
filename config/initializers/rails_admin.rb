@@ -30,4 +30,31 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Talk do
+    list do
+      field :event
+      field :order
+      field :name
+      field :description
+      field :schedule
+      field :ends_at
+    end
+
+    edit do
+      field :event
+      field :order
+      field :name
+      field :description
+      field :schedule
+      field :ends_at
+      field :is_keynote
+      field :rate
+      field :note
+      field :is_fav
+      field :is_canceled
+      field :has_feedback
+    end
+  end
+
 end
