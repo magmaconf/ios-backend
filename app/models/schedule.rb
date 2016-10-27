@@ -7,6 +7,7 @@ class Schedule < ActiveRecord::Base
   default_scope -> { order('name asc') }
 
   private
+
     def set_name
       self.name = self.hour.to_s(:time)
     end

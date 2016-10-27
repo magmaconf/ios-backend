@@ -40,6 +40,7 @@ RailsAdmin.config do |config|
       field :schedule
       field :ends_at
     end
+
     edit do
       field :event
       field :order
