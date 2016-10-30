@@ -46,6 +46,7 @@ RailsAdmin.config do |config|
       field :order
       field :name
       field :description
+      field :speaker
       field :schedule
       field :ends_at
       field :is_keynote
