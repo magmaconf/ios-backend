@@ -29,6 +29,7 @@ gem 'faker'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'haml', '~> 4.0.5'
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
 group :development do
   gem 'web-console', '~> 2.0'
