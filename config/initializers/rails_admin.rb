@@ -33,6 +33,7 @@ RailsAdmin.config do |config|
 
   config.model Speaker do
     edit do
+      field :speaker_order
       field :name
       field :twitter_account
       field :nickname

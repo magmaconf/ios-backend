@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202170035) do
+ActiveRecord::Schema.define(version: 20161202182554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20161202170035) do
     t.boolean  "is_keynote"
     t.string   "company"
     t.binary   "image_field"
+    t.integer  "speaker_order"
   end
 
   create_table "talks", force: :cascade do |t|
