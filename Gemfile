@@ -32,6 +32,8 @@ gem 'haml', '~> 4.0.5'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'newrelic_rpm'
+gem 'puma'
 
 group :development do
   gem 'web-console', '~> 2.0'
