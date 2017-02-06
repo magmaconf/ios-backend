@@ -31,6 +31,18 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  config.model Speaker do
+    edit do
+      field :speaker_order
+      field :name
+      field :twitter_account
+      field :nickname
+      field :bio
+      field :company
+      field :image_field, :carrierwave
+    end
+  end
+
   config.model Talk do
     list do
       field :event
@@ -46,6 +58,7 @@ RailsAdmin.config do |config|
       field :order
       field :name
       field :description
+      field :speaker
       field :schedule
       field :ends_at
       field :is_keynote
