@@ -6,11 +6,9 @@ class Api::V1::RatesController < Api::V1::ApiController
       if talk_rate.save
         render json: { success: true, rate: talk_rate }, status: 201
       else
-        puts working_time.errors.full_message
         render json: '{"success":false, "message":"Something went wrong"}', status: 505
       end
     rescue Exception => ex
-      puts ex.message
       render json: '{"success":false, "message":"Invalid request"}', status: 505
     end
   end
