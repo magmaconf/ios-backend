@@ -2,6 +2,7 @@ class Talk < ActiveRecord::Base
   belongs_to :speaker
   belongs_to :event
   belongs_to :schedule
+  has_many   :talk_rates
   before_save :set_starts_at
 
   default_scope -> { order('starts_at asc') }

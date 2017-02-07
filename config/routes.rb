@@ -9,6 +9,7 @@ Rails.application.routes.draw do
         resources :speakers, only: :index
         resources :events, only: :index
         resources :schedules, only: :index
+        resources :rates
       end
     end
   end
