@@ -40,6 +40,7 @@ RailsAdmin.config do |config|
       field :bio
       field :company
       field :image_field, :carrierwave
+      field :mask_image, :carrierwave
     end
   end
 

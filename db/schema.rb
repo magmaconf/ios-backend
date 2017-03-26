@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206194340) do
+ActiveRecord::Schema.define(version: 20170326173210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,6 @@ ActiveRecord::Schema.define(version: 20170206194340) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.date     "date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mascots", force: :cascade do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.integer  "votes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170206194340) do
     t.string   "company"
     t.binary   "image_field"
     t.integer  "speaker_order"
+    t.binary   "mask_image"
   end
 
   create_table "talk_rates", force: :cascade do |t|
